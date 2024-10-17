@@ -1,4 +1,4 @@
-console.log("added")
+
 function getInputValueById(id){
     const inputNumber=document.getElementById(id).value;
     const inputValue=parseFloat(inputNumber);
@@ -6,9 +6,12 @@ function getInputValueById(id){
 }
 
 
+
+
 //---------------------------- donation for Noakhali section------------------------------------
 
-document.getElementById("Noakhali-button").addEventListener("click", function(){
+document.getElementById("Noakhali-button").addEventListener("click", function(event){
+    event.preventDefault();
 
     const amount=getInputValueById("Noakhali-input");
 
@@ -26,6 +29,19 @@ document.getElementById("Noakhali-button").addEventListener("click", function(){
 
         const myUpdatedBalance=myBalance-amount;
         document.getElementById("myBalance").innerText=myUpdatedBalance;
+
+        const p = document.createElement('p');
+        p.innerText = `${amount} Taka Donated for Flood at Noakhali, Bangladesh`;
+        document.getElementById("history").appendChild(p);
+        const myBox=document.getElementById("p");
+
+
+        p.style.border="3px solid black";
+        p.style.marginLeft="20rem";
+        p.style.marginRight="20rem";
+        p.style.padding="1rem";
+        p.style.fontWeight="600"
+        p.style.marginBottom="10px"
     }
     else{
         alert("Invalid Amount");
@@ -35,7 +51,8 @@ document.getElementById("Noakhali-button").addEventListener("click", function(){
 
 //-----------------------------donation for Feni section---------------------------------------- 
 
-document.getElementById("Feni-button").addEventListener("click", function(){
+document.getElementById("Feni-button").addEventListener("click", function(event){
+    event.preventDefault();
 
     const amount=getInputValueById("Feni-input");
 
@@ -53,6 +70,19 @@ document.getElementById("Feni-button").addEventListener("click", function(){
 
         const myUpdatedBalance=myBalance-amount;
         document.getElementById("myBalance").innerText=myUpdatedBalance;
+
+        const p = document.createElement('p');
+        p.innerText = `${amount} Taka Donated for Flood at Feni, Bangladesh`;
+        document.getElementById("history").appendChild(p);
+        const myBox=document.getElementById("p");
+
+
+        p.style.border="3px solid black";
+        p.style.marginLeft="20rem";
+        p.style.marginRight="20rem";
+        p.style.padding="1rem";
+        p.style.fontWeight="600"
+        p.style.marginBottom="10px"
     }
     else{
         alert("Invalid Amount");
@@ -62,7 +92,8 @@ document.getElementById("Feni-button").addEventListener("click", function(){
 
 //---------------------------------protest donation section------------------------------------
 
-document.getElementById("Protest-button").addEventListener("click", function(){
+document.getElementById("Protest-button").addEventListener("click", function(event){
+    event.preventDefault();
 
     const amount=getInputValueById("Protest-input");
 
@@ -80,8 +111,35 @@ document.getElementById("Protest-button").addEventListener("click", function(){
 
         const myUpdatedBalance=myBalance-amount;
         document.getElementById("myBalance").innerText=myUpdatedBalance;
+
+
+        const p = document.createElement('p');
+        p.innerText = `${amount} Taka Donated for 15500 Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh`;
+        document.getElementById("history").appendChild(p);
+        const myBox=document.getElementById("p");
+
+
+        p.style.border="3px solid black";
+        p.style.marginLeft="20rem";
+        p.style.marginRight="20rem";
+        p.style.padding="1rem";
+        p.style.fontWeight="600"
+        p.style.marginBottom="10px"
     }
     else{
         alert("Invalid Amount");
     }
+})
+
+
+
+document.getElementById("history-btn").addEventListener("click", function(){
+    document.getElementById("home").classList.add("hidden");
+    document.getElementById("history").classList.remove("hidden");
+})
+
+
+document.getElementById("donation-btn").addEventListener("click", function(){
+    document.getElementById("home").classList.remove("hidden");
+    document.getElementById("history").classList.add("hidden");
 })

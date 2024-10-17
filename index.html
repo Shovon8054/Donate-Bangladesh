@@ -16,7 +16,7 @@
         <div>
             <div class="flex justify-between items-center p-4 bg-[#F9F7F3] text-black pb-10 px-20">
                 <!-- Left: Blog Button -->
-                <button class="btn btn-info text-2xl bg-[#B4F461] border-none">Blog</button>
+                <button class="btn btn-info text-xl bg-[#B4F461] border-none">Blog</button>
                 <!-- Center: Title -->
                 <div class="flex space-x-5">
                     <img src="assets/logo.png" alt="loading" class="flex justify-center items-center w-10 h-10">
@@ -34,10 +34,10 @@
               <!-- 2 button section -->
     
               <div class="flex justify-center space-x-2 mt-20">
-                <button class="bg-[#B4F461] font-semibold px-4 py-2 rounded hover:bg-blue-600">
+                <button class="bg-[#B4F461] font-semibold px-4 py-2 rounded hover:bg-blue-600" id="donation-btn">
                     Donation
                 </button>
-                <button class="bg-[#1111114D] font-semibold px-4 py-2 rounded hover:bg-green-600">
+                <button class="bg-[#1111114D] font-semibold px-4 py-2 rounded hover:bg-green-600" id="history-btn">
                     History
                 </button>
               </div>
@@ -47,8 +47,9 @@
     </nav>
     <!-- main starts -->
     <main>
-        <!-- card-1 -->
-        <section>
+        <div id="home">
+            <!------------------------------------------ card-1 --------------------------------------------->
+            <section>
             <div class="card lg:card-side bg-base-100 shadow-xl mx-40 my-10 flex">
 
                 <!-- left image  section -->
@@ -73,10 +74,10 @@
                     <button class="btn btn-info text-sm px-4 py-2 bg-[#B4F461] border-none rounded" id="Noakhali-button">Donate Now</button>
                 </div>              
             </div>
-        </section>
+            </section>
 
-        <!-- card-2 -->
-        <section>
+        <!-- --------------------------------------card-2------------------------------------------- -->
+            <section>
             <div class="card lg:card-side bg-base-100 shadow-xl mx-40 my-10 flex">
 
                 <!-- left image  section -->
@@ -101,10 +102,10 @@
                     <button class="btn btn-info text-sm px-4 py-2 bg-[#B4F461] border-none rounded" id="Feni-button">Donate Now</button>
                 </div>              
             </div> 
-        </section>
+            </section>
 
-        <!-- card-3 --------------------------------------------------------------------------->
-        <section>
+        <!------------------------------------------- card-3 ------------------------------------------------>
+            <section>
             <div class="card lg:card-side bg-base-100 shadow-xl mx-40 my-20 flex">
 
                 <!-- left image  section -->
@@ -129,11 +130,16 @@
                     <button class="btn btn-info text-sm px-4 py-2 bg-[#B4F461] border-none rounded" id="Protest-button">Donate Now</button>
                 </div>              
             </div>
-        </section>
-    </main>
+            </section>
+        </div>
+<!-- ============================================history page======================================== -->
+        <div id="history" class="hidden">
+            <h3 class="mx-auto font-semibold text-2xl text-center">Donation History</h3>
 
-    <footer>
-    </footer>
+
+        </div>
+
+    </main>
 
     <script src="js/home.js"></script>
 </body>
