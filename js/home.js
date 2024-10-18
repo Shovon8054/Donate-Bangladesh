@@ -8,7 +8,7 @@ function getInputValueById(id){
 
 
 
-//---------------------------- donation for Noakhali section------------------------------------
+//---------------- donation for Noakhali section------------------------------------
 
 document.getElementById("Noakhali-button").addEventListener("click", function(event){
     event.preventDefault();
@@ -30,10 +30,13 @@ document.getElementById("Noakhali-button").addEventListener("click", function(ev
         const myUpdatedBalance=myBalance-amount;
         document.getElementById("myBalance").innerText=myUpdatedBalance;
 
+        // history added
         const p = document.createElement('p');
-        p.innerText = `${amount} Taka Donated for Flood at Noakhali, Bangladesh`;
+        p.innerText = `${amount} Taka Donated for Flood at Noakhali, Bangladesh on ${new Date().toLocaleString()}`;
         document.getElementById("history").appendChild(p);
         const myBox=document.getElementById("p");
+
+
 
 
         p.style.border="3px solid black";
@@ -49,7 +52,7 @@ document.getElementById("Noakhali-button").addEventListener("click", function(ev
 })
 
 
-//-----------------------------donation for Feni section---------------------------------------- 
+//------------------donation for Feni section---------------------------------------- 
 
 document.getElementById("Feni-button").addEventListener("click", function(event){
     event.preventDefault();
@@ -72,7 +75,7 @@ document.getElementById("Feni-button").addEventListener("click", function(event)
         document.getElementById("myBalance").innerText=myUpdatedBalance;
 
         const p = document.createElement('p');
-        p.innerText = `${amount} Taka Donated for Flood at Feni, Bangladesh`;
+        p.innerText = `${amount} Taka Donated for Flood at Feni, Bangladesh on ${new Date().toLocaleString()}`;
         document.getElementById("history").appendChild(p);
         const myBox=document.getElementById("p");
 
@@ -90,7 +93,7 @@ document.getElementById("Feni-button").addEventListener("click", function(event)
 })
 
 
-//---------------------------------protest donation section------------------------------------
+//----------------protest donation section------------------------------------
 
 document.getElementById("Protest-button").addEventListener("click", function(event){
     event.preventDefault();
@@ -114,7 +117,7 @@ document.getElementById("Protest-button").addEventListener("click", function(eve
 
 
         const p = document.createElement('p');
-        p.innerText = `${amount} Taka Donated for 15500 Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh`;
+        p.innerText = `${amount} Taka Donated for 15500 Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh on ${new Date().toLocaleString()}`;
         document.getElementById("history").appendChild(p);
         const myBox=document.getElementById("p");
 
