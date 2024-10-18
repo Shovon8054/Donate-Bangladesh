@@ -146,3 +146,4 @@ document.getElementById("donation-btn").addEventListener("click", function(){
     document.getElementById("home").classList.remove("hidden");
     document.getElementById("history").classList.add("hidden");
 })
+
